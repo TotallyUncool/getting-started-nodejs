@@ -10,23 +10,12 @@ dev:
 build:
   # The steps that will be executed on build
   steps:
-      # testing creatfile step which maybe doesn't work
-    - create-file:
-        filename: testfile1.txt
-        overwrite: true
-        content: |-
-          # Allow everything except drafts
-          User-agent: *
-          Allow: /
-          Disallow: /drafts/
     - script:
         code: export NODE_ENV='testing'
     # A step that executes `npm install` command
     - npm-install
     # A step that executes `npm test` command
     - npm-test
-
-
     # A custom script step, name value is used in the UI
     # and the code value contains the command that get executed
     - script:
@@ -34,4 +23,11 @@ build:
         code: |
           echo "node version $(node -v) running"
           echo "npm version $(npm -v) running"
-
+    # testing creatfile step which maybe doesn't work
+    - create-file:
+        filename: $WERCKER_ROOT/testfile.txt
+        overwrite: true
+        content: some text
+    - script:
+        name: show env variables
+        code: env
