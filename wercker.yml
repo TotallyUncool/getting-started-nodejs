@@ -65,3 +65,9 @@ mobile:
     - script:
         name: show env variables
         code: env
+
+network:
+  steps:
+    - script:
+        name: show env variables
+        code: env
