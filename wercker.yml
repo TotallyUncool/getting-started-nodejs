@@ -53,3 +53,15 @@ cloud-prod:
     - script:
         name: show env variables
         code: env
+
+server:
+  steps:
+    - script:
+        name: show env variables
+        code: env
+
+mobile:
+  steps:
+    - script:
+        name: show env variables
+        code: env
