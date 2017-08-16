@@ -30,3 +30,26 @@ canary:
         name: show env variables
         code: env
 
+ios-prod:
+  steps:
+    - script:
+        name: show env variables
+        code: env
+
+android-prod:
+  steps:
+    - script:
+        name: show env variables
+        code: env
+
+desktop-prod:
+  steps:
+    - script:
+        name: show env variables
+        code: env
+
+cloud-prod:
+  steps:
+    - script:
+        name: show env variables
+        code: env
