@@ -23,11 +23,10 @@ build:
         code: |
           echo "node version $(node -v) running"
           echo "npm version $(npm -v) running"
-    # testing creatfile step which maybe doesn't work
-    - create-file:
-        filename: $WERCKER_ROOT/testfile.txt
-        overwrite: true
-        content: some text
+
+canary:
+  steps:
     - script:
         name: show env variables
         code: env
+
